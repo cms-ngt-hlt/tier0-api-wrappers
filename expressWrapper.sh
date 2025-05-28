@@ -16,7 +16,7 @@
 
 curl "https://cmsweb.cern.ch/t0wmadatasvc/prod/express_config?run=$runnum&stream=$streamnam" > any3.json
 scramarchj=`cat any3.json | jq -r '.result[].scram_arch'`
-cmsswj=`cat any3.json | jq -r '.result[].cmssw'`
+cmsswj=`cat any3.json | jq -r '.result[].reco_cmssw'`
 scenarioj=`cat any3.json | jq -r '.result[].scenario'`
 globaltagj=`cat any3.json | jq -r '.result[].global_tag'`
 alcaskimj=`cat any3.json | jq -r '.result[].alca_skim'`

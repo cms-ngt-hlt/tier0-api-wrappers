@@ -1,6 +1,6 @@
 #!/bin/bash
     echo This wrapper works by creating a new project area, so it should be used on a local lxplus area. If you already have a project area on the folder then this wrapper will not work
-    echo You need a VOMS proxy to access the Tier0 API (i.e. /tmp/x509up_uNNNN)
+    echo You need a VOMS proxy to access the Tier0 API i.e. /tmp/x509up_uNNNN
     echo Please provide it:
     read proxylocation
     echo Please provide the run number i.e. 326607

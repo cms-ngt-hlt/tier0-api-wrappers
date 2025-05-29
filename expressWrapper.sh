@@ -14,7 +14,9 @@
     echo Please provide the LFN i.e. /store/whatever
     read lfn
 
-curl "https://cmsweb.cern.ch/t0wmadatasvc/prod/express_config?run=$runnum&stream=$streamnam" > any3.json
+    curl \
+        --cert "$proxylocation" --key "$proxylocation" \
+        "https://cmsweb.cern.ch/t0wmadatasvc/prod/express_config?run=$runnum&stream=$streamnam" > any3.json
 scramarchj=`cat any3.json | jq -r '.result[].scram_arch'`
 cmsswj=`cat any3.json | jq -r '.result[].reco_cmssw'`
 scenarioj=`cat any3.json | jq -r '.result[].scenario'`

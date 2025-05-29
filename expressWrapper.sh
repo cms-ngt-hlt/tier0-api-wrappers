@@ -46,9 +46,9 @@ if [ $varnam2 == 'Y' ]
 then
     if [ $alcaskim == 'null' ]
     then
-        python3 $CMSSW_RELEASE_BASE/src/Configuration/DataProcessing/test/RunExpressProcessing.py --scenario=$scenarioj --raw --reco --fevt --dqm --global-tag $globaltagj --lfn=$lfn --nThreads=nthread
+        python3 $CMSSW_RELEASE_BASE/src/Configuration/DataProcessing/test/RunExpressProcessing.py --scenario=$scenarioj --raw --reco --fevt --dqm --global-tag $globaltagj --lfn=$lfn --nThreads="$nthread"
     else
-        python3 $CMSSW_RELEASE_BASE/src/Configuration/DataProcessing/test/RunExpressProcessing.py --scenario=$scenarioj --raw --reco --fevt --dqm --global-tag $globaltagj --lfn=$lfn --nThreads=nthread --alcarecos=$alcaskim
+        python3 $CMSSW_RELEASE_BASE/src/Configuration/DataProcessing/test/RunExpressProcessing.py --scenario=$scenarioj --raw --reco --fevt --dqm --global-tag $globaltagj --lfn=$lfn --nThreads="$nthread" --alcarecos=$alcaskim
     fi
 else
     if [ $alcaskim == 'null' ]
